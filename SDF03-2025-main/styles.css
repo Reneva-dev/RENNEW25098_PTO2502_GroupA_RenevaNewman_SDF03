@@ -2,8 +2,16 @@
 
 :root {
     font-size: 10px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1 fr)
+    align-items: center;
+}
+
+.profile-image{
+    display: grid;
+    grid-template-columns: (1fr, 2fr);
+    grid-template-rows: repeat (3, auto);
+    grid-column-gap: 3rem;
     align-items: center;
 }
 
@@ -26,6 +34,5 @@ img {
     grid-template-columns: repeat(100px, 3fr);
     width: 20%;
     height: auto;
-git
 
 }
