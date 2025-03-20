@@ -2,12 +2,15 @@
 
 :root {
     font-size: 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1 fr)
-    align-items: center;
 }
 
-.profile-image{
+.container{
+    max-width: 93.5rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.profile-user-settings{
     display: grid;
     grid-template-columns: (1fr, 2fr);
     grid-template-rows: repeat (3, auto);
@@ -15,6 +18,33 @@
     align-items: center;
 }
 
+.profile-stats li{
+    display: inline-block;
+    font-size: 1.5;
+    margin-right: 4rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.profile-image{
+    float: left;
+    width: calc (33.333% -1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+.profile-user-settings, .profile-stats, .profile-bio{
+    float: left;
+    width: calc (66.666% -2rem);
+}
+
+.profile-user-name{
+    display: inline-block;
+    font-size: 3.2rem;
+    font-weight: 300;
+}
 *,
 *::before,
 *::after {
@@ -30,9 +60,5 @@ body {
 }
 
 img {
-    display: grid;
-    grid-template-columns: repeat(100px, 3fr);
-    width: 20%;
-    height: auto;
-
+    display: block;
 }
