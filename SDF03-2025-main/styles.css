@@ -1,0 +1,31 @@
+/* Base Styles */
+
+:root {
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #fafafa;
+    color: #262626;
+    padding-bottom: 3rem;
+}
+
+img {
+    display: grid;
+    grid-template-columns: repeat(100px, 3fr);
+    width: 20%;
+    height: auto;
+
+
+}
