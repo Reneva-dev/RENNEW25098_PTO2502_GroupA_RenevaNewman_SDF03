@@ -3,11 +3,66 @@
 :root {
     font-size: 10px;
 }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #fafafa;
+    color: #262626;
+    padding-bottom: 3rem;
+}
+
+img {
+    display: block;
+}
 
 .container{
     max-width: 93.5rem;
     margin: 0 auto;
     padding: 0 2rem;
+}
+
+.btn{
+    display: inline-block;
+    font: inherit;
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-focus{
+    outline: 0.5rem auto #4d90fe;
+}
+
+.visually-hidden{
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect (1px, 1px, 1px, 1px);
+}
+
+/*Profile Section*/
+
+.profile{
+    padding: 5rem 0;
+}
+
+.profile-stats{
+    margin-top: 2.3rem;
+}
+
+.profile::after{
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .profile-user-settings{
@@ -26,6 +81,10 @@
     font-weight: bold;
 }
 
+.profile-stats li:last-of-type{
+    margin-right: 0;
+}
+
 .profile-image{
     float: left;
     width: calc (33.333% -1rem);
@@ -33,6 +92,9 @@
     justify-content: center;
     align-items: center;
     margin-right: 3rem;
+}
+.profile-image img{
+    border-radius: 50%;
 }
 
 .profile-user-settings, .profile-stats, .profile-bio{
@@ -45,20 +107,45 @@
     font-size: 3.2rem;
     font-weight: 300;
 }
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+
+.profile-edit-btn{
+    font-size: 1.4rem;
+    line-height: 1.8;
+    border: 0.1rem solid #dbdbdb;
+    border-radius: 0.3rem;
+    padding: 0 2.4rem;
+    margin-left: 2rem;
+
 }
 
-body {
-    font-family: "Open Sans", Arial, sans-serif;
-    min-height: 100vh;
-    background-color: #fafafa;
-    color: #262626;
+.profile-setting-btn{
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1rem -1rem;
     padding-bottom: 3rem;
+
 }
 
-img {
-    display: block;
+.gallery-item{
+    position: relative;
+    flex: 0 22rem;
+    margin: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.gallery-item-info{
+    display: none;
+}
+
+.gallery-item-info li{
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 600;
+
 }
