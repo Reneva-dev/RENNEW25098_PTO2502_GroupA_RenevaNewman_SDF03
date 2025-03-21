@@ -192,6 +192,17 @@ img {
     object-fit: cover; 
 }
 
+/*Loading Spinner*/
+.loader{
+    width: 5rem;
+    height: 5rem;
+    border: 0.6rem solid #999;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: loader 500ms linear infinite;
+}
+
 /*Media Queries*/
 
 @media screen and (max-width: 40rem) 
@@ -258,4 +269,3 @@ img {
 .profile-stat-count{
     display: block;
 }
-
