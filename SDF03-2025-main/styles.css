@@ -269,3 +269,10 @@ img {
 .profile-stat-count{
     display: block;
 }
+
+/*Spinner Animation*/
+@keyframes loader{
+    to{
+        transform: rotate(360deg);
+    }
+}
