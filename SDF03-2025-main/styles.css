@@ -194,19 +194,36 @@ img {
 
 /*Media Queries*/
 
+@media screen and (max-width: 40rem) 
+{.profile {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem o;
+
+}
+
+.profile::after{
+    display: none;
+}
+
+.profile-image, .profile-user-settings, .profile-stats, .profile-bio{
+    float: none;
+    width: auto;
+}
+
 .profile-image img{
-    width: 7.8rem;
+    width: 7.7rem;
 }
 
 .profile-user-setting{
-    flex-basis: calc (100% -7.8rem);
+    flex-basis: calc (100% -10.7rem);
     display: flex;
     flex-wrap: wrap;
     margin-top: 1rem;
 }
 
 .profile-user-name{
-    font-size: 2.3rem;
+    font-size: 2.2rem;
 }
 
 .profile-edit-btn{
@@ -233,7 +250,7 @@ img {
 }
 
 .profile-stats li{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     flex: 1;
     margin: 0;
 }
@@ -241,3 +258,4 @@ img {
 .profile-stat-count{
     display: block;
 }
+
