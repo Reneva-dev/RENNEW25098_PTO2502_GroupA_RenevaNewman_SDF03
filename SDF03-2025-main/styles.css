@@ -55,14 +55,27 @@ img {
     padding: 5rem 0;
 }
 
-.profile-stats{
-    margin-top: 2.3rem;
-}
-
 .profile::after{
     content: "";
     display: block;
     clear: both;
+}
+
+.profile-image{
+    float: left;
+    width: calc (33.333% -1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+}
+.profile-image img{
+    border-radius: 50%;
+}
+
+.profile-user-settings, .profile-stats, .profile-bio{
+    float: left;
+    width: calc (66.666% -2rem);
 }
 
 .profile-user-settings{
@@ -71,6 +84,31 @@ img {
     grid-template-rows: repeat (3, auto);
     grid-column-gap: 3rem;
     align-items: center;
+}
+
+.profile-user-name{
+    display: inline-block;
+    font-size: 3.2rem;
+    font-weight: 300;
+}
+
+.profile-edit-btn{
+    font-size: 1.4rem;
+    line-height: 1.8;
+    border: 0.1rem solid #dbdbdb;
+    border-radius: 0.3rem;
+    padding: 0 2.4rem;
+    margin-left: 2rem;
+
+}
+
+.profile-setting-btn{
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.profile-stats{
+    margin-top: 2.3rem;
 }
 
 .profile-stats li{
@@ -96,44 +134,6 @@ img {
     font-weight: 600;
 }
 
-.profile-image{
-    float: left;
-    width: calc (33.333% -1rem);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 3rem;
-}
-.profile-image img{
-    border-radius: 50%;
-}
-
-.profile-user-settings, .profile-stats, .profile-bio{
-    float: left;
-    width: calc (66.666% -2rem);
-}
-
-.profile-user-name{
-    display: inline-block;
-    font-size: 3.2rem;
-    font-weight: 300;
-}
-
-.profile-edit-btn{
-    font-size: 1.4rem;
-    line-height: 1.8;
-    border: 0.1rem solid #dbdbdb;
-    border-radius: 0.3rem;
-    padding: 0 2.4rem;
-    margin-left: 2rem;
-
-}
-
-.profile-setting-btn{
-    font-size: 2rem;
-    margin-left: 1rem;
-}
-
 /*Gallery Section*/
 
 .gallery{
@@ -157,7 +157,7 @@ img {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 0;
+    top: 180px;
     width: 100%;
     height: 100;
     background-color: rgba(0, 0, 0, 0.3);
